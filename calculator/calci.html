@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="cal.css">
+</head>
+<body>
+	<h1 class ="headding">Calculator</h1>
+	<input class="tex" type="text" name="name">
+	<br>
+	<button class="but" onclick="update(7)">7</button><!--
+	--><td><button class="but" onclick="update(8)">8</button><!--
+	--><button class="but" onclick="update(9)">9</button><!--
+	--><button class=" but butt" onclick="update('*')">*</button><br>
+	<button class="but" onclick="update(4)">4</button><!--
+	<--><button class="but" onclick="update(5)">5</button><!--
+	--><button class="but" onclick="update(6)">6</button><!--
+	--><button class="but  butt" onclick="update('-')">-</button><br>
+	  <button class="but" onclick="update(1)">1</button><!--
+	--><button class="but" onclick="update(2)">2</button><!--
+	--><button class="but" onclick="update(3)">3</button><!--
+	--><button class="but butt " onclick="update('+')">+</button><br><!--
+	--><button class="but" onclick="update(0)">0</button><!--
+	--><button class="but" onclick="update('.')">.</button><!--
+	--><button class="but" onclick="evalua()">=</button><!--
+	--><button class="but butt" onclick="update('/')">/</button><br><!--
+	--><button class="but1" onclick="cleartex()">Clear</button>
+
+
+<script >
+	function update(a) {
+		 document.getElementsByName('name')[0].value+=a	
+		}
+	function evalua(){
+		var c=document.getElementsByName('name')[0].value;
+		var d=eval(c);
+		document.getElementsByName('name')[0].value=d;
+	}
+	function cleartex(){
+		document.getElementsByName('name')[0].value="";
+	}
+</script>
+</body>
+</html>
